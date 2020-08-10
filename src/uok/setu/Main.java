@@ -8,7 +8,8 @@ public class Main {
     static Scanner scanner=new Scanner(System.in);
 
     public static void main(String[] args)  {
-        ArrayList<Double> fileReadDataArray= getUserInput();
+        ArrayList<Double> fileReadDataArray;
+        fileReadDataArray= getUserInput();
         Calculator calculator=new Calculator(fileReadDataArray.get(0),fileReadDataArray.get(1));
         while (true) {
             System.out.println("\nType your arithmetic operators here");
