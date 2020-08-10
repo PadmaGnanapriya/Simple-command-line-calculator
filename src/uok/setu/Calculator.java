@@ -14,7 +14,7 @@ public class Calculator {
 
     public String calculate(String mathOperation){
         switch (mathOperation){
-            case "sum":
+            case "add":
                 setNum3(getNum1() + getNum2());break;
             case "sub":
                 setNum3(getNum1() - getNum2());break;
@@ -70,4 +70,4 @@ public class Calculator {
         this.calOutput2 = calOutput2;
     }
 }
-//
+//C:\Users\PADMA\Desktop\Padme.txt
