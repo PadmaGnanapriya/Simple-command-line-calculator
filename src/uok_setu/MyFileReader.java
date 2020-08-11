@@ -1,14 +1,13 @@
-package uok.setu;
+package uok_setu;
 
 /**
  *
  * @author Padma Gnananpriya - SE/2017/014
  */
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class MyFileReader {
 
@@ -26,6 +25,6 @@ public class MyFileReader {
             fileReadDataArray.add(Double.valueOf(contentLine.trim()));
             contentLine = br.readLine();
         }
-        return fileReadDataArray;   //Returning
+        return fileReadDataArray;   //Returning two numbers via ArrayList
     }
 }

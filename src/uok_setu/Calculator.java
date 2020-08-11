@@ -1,4 +1,4 @@
-package uok.setu;
+package uok_setu;
 
 /**
  *

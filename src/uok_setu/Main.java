@@ -1,4 +1,4 @@
-package uok.setu;
+package uok_setu;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -12,10 +12,10 @@ public class Main {
     static Scanner scanner=new Scanner(System.in);
 
     public static void main(String[] args)  {
-        ArrayList<Double> fileReadDataArray;
-        fileReadDataArray= getUserInput();        //Getting two numbers in the file via double ArrayList
+        ArrayList<Double> fileReadDataArray= getUserInput();        //Getting two numbers in the file via double ArrayList
         try {
             Calculator calculator = new Calculator(fileReadDataArray.get(0), fileReadDataArray.get(1));
+            System.out.println("Number 1 is = "+fileReadDataArray.get(0)+" ;\tNumber 2 is = "+fileReadDataArray.get(1));
             while (true) {
                 System.out.println("\nType your arithmetic operators here");
                 System.out.print("(Hint:- add, sub, mul, div) : ");
@@ -23,8 +23,9 @@ public class Main {
                 String output = calculator.calculate(userFunction);
                 System.out.println(output);
             }
-        }catch (IndexOutOfBoundsException error) {
-            System.out.println(error);
+        }catch (IndexOutOfBoundsException error) {     //If only contain single element in the ArrayList
+            System.out.println(">>> Sorry, given file contain only one numerical value.");
+            getUserInput();
         }
     }
     
@@ -40,7 +41,6 @@ public class Main {
         } catch (Exception e) {   // Handing other Exception
             System.out.println(">>> Sorry. The system cannot execute this program.");
             System.out.println(">>> Please make sure given file can contain only two numerical values only.");
-            getUserInput();
         }
         return usrFileData;
     }
