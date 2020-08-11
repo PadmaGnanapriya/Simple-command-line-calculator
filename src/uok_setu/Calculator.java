@@ -1,6 +1,7 @@
 package uok_setu;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  *
@@ -26,9 +27,8 @@ public class Calculator {
             case "mul":num3=num1*num2;break;
             default:calOutput="Wrong operation";
         }
-        System.out.println(num3);
         String num=(num3- (int)num3)==0? String.valueOf((int)num3):String.valueOf(num3);
-        calOutput2= calOutput=="Wrong operation"? calOutput: "\tAnswer = "+num;
+        calOutput2= Objects.equals(calOutput, "Wrong operation") ? calOutput: "\tAnswer = "+num;
         calOutput=null;
         return calOutput2;
     }
