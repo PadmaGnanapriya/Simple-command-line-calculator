@@ -24,7 +24,7 @@ public class Calculator {
             case "mul":num3=num1*num2;break;
             default:calOutput="Wrong operation";
         }
-        calOutput2= calOutput=="Wrong operation"? calOutput: " Answer = "+num3;
+        calOutput2= calOutput=="Wrong operation"? calOutput: "\tAnswer = "+num3;
         calOutput=null;
         return calOutput2;
     }
