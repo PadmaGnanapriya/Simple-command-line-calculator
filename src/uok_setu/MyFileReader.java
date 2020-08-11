@@ -33,16 +33,17 @@ public class MyFileReader {
             throw new InvalidException("There is more than two numbers");
         }
         fileReadDataArray.removeAll(fileReadDataArray);
+        fileReadDataArray.clear();
     }
 
     public static double getNum1(){   //Passing the num1 if calls
         return num1;
     }
-
     public static double getNum2(){  //Passing the num2 if calls
         return num2;
     }
 }
+
 
 
 class InvalidException extends Exception{   //Create InvalidException class to handle, if more than 2 numbers in the file.

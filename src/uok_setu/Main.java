@@ -17,7 +17,7 @@ public class Main {
         Calculator calculator = new Calculator(MyFileReader.getNum1(), MyFileReader.getNum2());
         System.out.println("\tNumber 1 is = "+MyFileReader.getNum1()+"\n\tNumber 2 is = "+MyFileReader.getNum2());
         while (true) {
-            System.out.println("\nType your arithmetic operators here");
+            System.out.println("\nType your arithmetic operation here");
             System.out.print("(Hint:- add, sub, mul, div) : ");
             String userFunction = scanner.next().toLowerCase();
             String output = calculator.calculate(userFunction);
@@ -27,7 +27,7 @@ public class Main {
 
     private static void getUserInput(){
         System.out.print("Enter your file path: ");
-        String path=scanner.nextLine();
+        String path=scanner.nextLine();          //   absolute path Or Relative path needed
         try {
             MyFileReader.readUserInputFile(path);
         } catch (FileNotFoundException e) {
